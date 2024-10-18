@@ -19,20 +19,19 @@ namespace EmployeeManager
             // Überprüfen, ob der Name leer ist
             if (string.IsNullOrWhiteSpace(name))
                 {
-                ValidationMessage.Text = "Bitte geben Sie einen Namen ein.";
-                return;
+                TextBlock.Text = "Bitte geben Sie einen Namen ein."; // Fehler-Meldung im TextBlock
+                return; // Stoppe die Ausführung, wenn die Eingabe ungültig ist
             }
 
             // Versuche, das Alter zu parsen
             if (!int.TryParse(ageText, out int alter) || alter <= 0)
             {
-                ValidationMessage.Text = "Bitte geben Sie ein gültiges Alter ein.";
+                TextBlock.Text = "Bitte geben Sie ein gültiges Alter ein."; // Fehler-Meldung im TextBlock
                 return; // Stoppe die Ausführung, wenn die Eingabe ungültig ist
             }
 
             // Begrüßungsnachricht
-            GreetingTextBlock.Text = $"Herzlich Willkommen, {name}! Ihr Alter ist {alter} Jahre.";
-            ValidationMessage.Text = $"Die Daten wurden erfolgreich übermittelt.";
+            TextBlock.Text = $"Herzlich Willkommen, {name}! Ihr Alter ist {alter} Jahre.";
             NameTextBox.Text = string.Empty; // Textboxen werden geleert
             AgeTextBox.Text = string.Empty;
         }

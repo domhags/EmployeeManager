@@ -18,12 +18,9 @@
         <Button Content="Abschicken" HorizontalAlignment="Left" Margin="466,102,0,0" 
                 VerticalAlignment="Top" Click="Save_Button_Click" FontSize="20" 
                 FontWeight="Bold" Width="138"/>
-        <TextBlock x:Name="GreetingTextBlock" HorizontalAlignment="Left" 
+        <TextBlock x:Name="TextBlock" HorizontalAlignment="Left" 
                    Margin="136,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
                    FontWeight="Bold"/>
-        <TextBlock x:Name="ValidationMessage" HorizontalAlignment="Left" 
-                   Margin="136,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
-                   Foreground="Red" FontWeight="Bold"/>
         <Label Content="Employee Manager" HorizontalAlignment="Left" 
                Margin="209,16,0,0" VerticalAlignment="Top" Height="46" 
                Width="224" FontSize="24"/>
