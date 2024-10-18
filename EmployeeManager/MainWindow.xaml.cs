@@ -4,14 +4,16 @@ namespace EmployeeManager
 {
     public partial class MainWindow : Window
     {
+        // Konstruktor
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); // Lädt das XAML-Layout
         }
 
+        // Beim Klick auf den "Abschicken" Button
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
-            string name = NameTextBox.Text;
+            string name = NameTextBox.Text; // Inhalt aus der Textbox wird ausgelesen
             string ageText = AgeTextBox.Text;
 
             // Überprüfen, ob der Name leer ist
@@ -30,11 +32,12 @@ namespace EmployeeManager
 
             // Begrüßungsnachricht
             GreetingTextBlock.Text = $"Herzlich Willkommen, {name}! Ihr Alter ist {alter} Jahre.";
-            NameTextBox.Text = string.Empty;
+            ValidationMessage.Text = $"Die Daten wurden erfolgreich übermittelt.";
+            NameTextBox.Text = string.Empty; // Textboxen werden geleert
             AgeTextBox.Text = string.Empty;
-            ValidationMessage.Text = string.Empty; // Ergebnis zurücksetzen
         }
 
+        // Beim Klicken auf den "Beenden" Button
         private void Exit_Button_Click(object sender, RoutedEventArgs e)
         {
             // Zeigt eine Bestätigungsnachricht an
